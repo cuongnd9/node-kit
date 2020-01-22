@@ -1,7 +1,7 @@
 {
   "name": "node-kit",
   "version": "1.0.0",
-  "description": "🐢🚀 A Node.js Kit with TypeScript, GraphQL, Sequelize, PostgreSQL and awesome tools.",
+  "description": "🐢🚀 A Node.js Kit with TypeScript, REST, GraphQL, gRPC, Sequelize, PostgreSQL and awesome tools.",
   "main": "index.ts",
   "repository": "git@github.com:cuongw/node-kit.git",
   "author": "Nguyen Duy Cuong <cuongw.me@gmail.com>",
@@ -19,11 +19,21 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
+    "@hapi/boom": "^9.0.0",
+    "@types/jsonwebtoken": "^8.3.6",
+    "@types/morgan": "^1.7.37",
     "apollo-server-express": "^2.9.16",
+    "body-parser": "^1.19.0",
+    "celebrate": "^11.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "giin": "^0.1.2",
     "graphql-tools": "^4.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
     "thinid": "^0.5.5"
   }
 }
