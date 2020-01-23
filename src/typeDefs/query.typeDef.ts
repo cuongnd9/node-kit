@@ -2,7 +2,7 @@ import { gql } from 'apollo-server-express';
 
 const typeDef = gql`
   type Query {
-    cats: [Cat!]
+    cats: [Cat]
     cat(id: ID!): Cat
   }
 `;
