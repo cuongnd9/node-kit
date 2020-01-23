@@ -2,7 +2,8 @@ import CatEntity from '../entities/cat.entity';
 import { Cat } from '../models';
 
 function createCat(cat: Cat) {
-  return CatEntity.create(cat);
+  const newCat = CatEntity.create(cat);
+  return CatEntity.save(newCat);
 }
 
 function getCatList({ skip = 0, take = 10 }: { skip?: number; take?: number }) {
