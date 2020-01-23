@@ -1,7 +1,7 @@
 import { Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import Boom from '@hapi/boom';
-import config from '../components/config';
+import config from './config';
 
 function checkRole(...allowed: string[]) {
   const isAllowed = (role: string) => allowed.indexOf(role) > -1;
