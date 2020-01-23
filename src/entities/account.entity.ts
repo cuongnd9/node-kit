@@ -10,6 +10,9 @@ class Account extends BaseEntity {
 
   @Column()
   password: string;
+
+  @Column()
+  email: string;
 }
 
 export default Account;
