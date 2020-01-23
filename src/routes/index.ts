@@ -4,7 +4,7 @@ import cors from 'cors';
 import logger from 'morgan';
 import Boom from '@hapi/boom';
 import { errors } from 'celebrate';
-import { handleError } from '../helpers';
+import { handleError } from '../components';
 import catRoute from './cat.route';
 
 const router = express.Router();

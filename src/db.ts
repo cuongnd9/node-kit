@@ -1,14 +1,15 @@
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
+import config from './components/config';
 
 const db = () =>
   createConnection({
     type: 'postgres',
-    host: 'ec2-174-129-33-139.compute-1.amazonaws.com',
-    port: 5432,
-    username: 'ofxijmmwyhmveh',
-    password: '8f14d081b3c01259a61f0b5eb606d28b726e2c959967483a1e0b2198e5ad467e',
-    database: 'd944eiog9a5a8j',
+    host: config.postgresql.host,
+    port: config.postgresql.port,
+    username: config.postgresql.username,
+    password: config.postgresql.password,
+    database: config.postgresql.database,
     entities: [__dirname + '/entities/*.entity.ts'],
     synchronize: true,
     ssl: true
