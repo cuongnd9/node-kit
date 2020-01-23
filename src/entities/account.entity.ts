@@ -13,6 +13,12 @@ class Account extends BaseEntity {
 
   @Column()
   email: string;
+
+  @Column()
+  role: string;
+
+  @Column()
+  avatar: string;
 }
 
 export default Account;

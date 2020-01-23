@@ -2,17 +2,19 @@
   "name": "node-kit",
   "version": "1.0.0",
   "description": "🐢🚀 A Node.js Kit with TypeScript, REST, GraphQL, gRPC, TypeORM, PostgreSQL and awesome tools.",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "repository": "git@github.com:cuongw/node-kit.git",
   "author": "Nguyen Duy Cuong <cuongw.me@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start:dev": "NODE_ENV=development nodemon --ignore build/ --exec ts-node src/index.ts",
-    "build": "tsc",
+    "build": "rm -rf build && tsc",
     "start": "node ./build/index.js",
     "migration:run": "npm run build && typeorm migration:run",
     "migration:revert": "npm run build && typeorm migration:revert",
-    "migration:auto": "npm run build && typeorm migration:create -n "
+    "migration:auto": "npm run build && typeorm migration:create -n ",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
     "@hapi/boom": "^9.0.0",
