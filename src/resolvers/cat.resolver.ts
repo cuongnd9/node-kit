@@ -1,27 +1,17 @@
 import { IResolvers } from 'graphql-tools';
-import { thinid } from 'thinid';
+import service from '../services/cat.service';
 
 const resolver: IResolvers = {
   Query: {
-    cats(root, args, context, info) {
-      return [
-        {
-          id: thinid(),
-          name: 'Dog'
-        },
-        {
-          id: thinid(),
-          name: 'Pig'
-        }
-      ];
+    async cats(root, args, context, info) {
+      const list = await service.getCatList(args);
+      return list;
     }
   },
   Mutation: {
-    createCat(root, args, context, info) {
-      return {
-        id: thinid(),
-        name: 'Pig'
-      };
+    async createCat(root, args, context, info) {
+      const newCat = await service.createCat(args);
+      return newCat;
     }
   }
 };
