@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "lib": ["es6", "dom"],
+    "moduleResolution": "node",
+    "lib": ["es5", "es6"],
     "declaration": true,
     "outDir": "./build",
     "strict": true,
@@ -10,7 +11,8 @@
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "sourceMap": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]

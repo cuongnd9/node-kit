@@ -7,9 +7,12 @@
   "author": "Nguyen Duy Cuong <cuongw.me@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start:dev": "NODE_ENV=development nodemon --ignore build/ --exec ts-node src/index.ts",
     "build": "tsc",
-    "start:dev": "nodemon --exec ts-node src/index.ts",
-    "start": "node ./build/index.js"
+    "start": "node ./build/index.js",
+    "migration:run": "npm run build && typeorm migration:run",
+    "migration:revert": "npm run build && typeorm migration:revert",
+    "migration:auto": "npm run build && typeorm migration:create -n "
   },
   "dependencies": {
     "@hapi/boom": "^9.0.0",
@@ -32,6 +35,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
+    "@types/hapi__joi": "^16.0.7",
     "@types/jsonwebtoken": "^8.3.7",
     "@types/morgan": "^1.7.37",
     "@types/node": "^12.12.7",
