@@ -10,9 +10,9 @@
     "start:dev": "NODE_ENV=development nodemon --ignore build/ --exec ts-node src/index.ts",
     "build": "rm -rf build && tsc",
     "start": "node ./build/index.js",
-    "migration:run": "npm run build && typeorm migration:run",
-    "migration:revert": "npm run build && typeorm migration:revert",
-    "migration:auto": "npm run build && typeorm migration:create -n ",
+    "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "migration:auto": "ts-node ./node_modules/typeorm/cli.js migration:create -n ",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
