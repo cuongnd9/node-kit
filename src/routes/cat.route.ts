@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get(
   '/',
-  // checkRole(roles.admin, roles.manager, roles.staff),
+  checkRole(roles.admin, roles.manager, roles.staff),
   celebrate({
     query: {
       skip: Joi.number()
@@ -16,10 +16,10 @@ router.get(
         .min(0),
       take: Joi.number()
         .integer()
-        .min(0)
-    }
+        .min(0),
+    },
   }),
-  withController(controller.list)
+  withController(controller.list),
 );
 
 router.post(
@@ -29,10 +29,10 @@ router.post(
     body: {
       name: Joi.string(),
       color: Joi.string(),
-      image: Joi.string()
-    }
+      image: Joi.string(),
+    },
   }),
-  withController(controller.create)
+  withController(controller.create),
 );
 
 export default router;
