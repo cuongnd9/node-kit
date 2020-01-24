@@ -16,16 +16,6 @@ function handleError(
     const { statusCode, payload } = err.output;
     return res.status(statusCode).json(payload);
   }
-  if (err.result && err.result.errors) {
-    // Error for Prisma
-    const prismaError = {
-      statusCode: 500,
-      err: 'An internal server error occurred',
-      message: 'Prisma Error',
-      errors: err.result.errors
-    };
-    return res.status(500).json(prismaError);
-  }
   // Default error.
   const defaultError = Boom.badImplementation(
     'An internal server error occurred'
