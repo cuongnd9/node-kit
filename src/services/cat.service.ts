@@ -1,5 +1,5 @@
 import CatEntity from '../entities/cat.entity';
-import { Cat } from '../models';
+import { Cat } from '../types';
 
 function createCat(cat: Cat) {
   const newCat = CatEntity.create(cat);
