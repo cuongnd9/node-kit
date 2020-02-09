@@ -1,7 +1,7 @@
 {
   "name": "node-kit",
   "version": "1.0.0",
-  "description": "🐢🚀 A Node.js Kit with TypeScript, REST, GraphQL, gRPC, TypeORM, PostgreSQL and awesome tools.",
+  "description": "🐢🚀 A Node.js Kit with TypeScript, REST, GraphQL, TypeORM, PostgreSQL and awesome tools.",
   "main": "src/index.ts",
   "repository": "git@github.com:cuongw/node-kit.git",
   "author": "Nguyen Duy Cuong <cuongw.me@gmail.com>",
