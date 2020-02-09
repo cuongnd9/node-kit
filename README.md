@@ -5,19 +5,18 @@
 
 ## Features
 
-- Using TypeScript
-- Setup Babel, ESLint, Prettier, Ava and Husky.
-- Having Basic authentication and authorization.
+- Using TypeScript.
+- Setup Babel, ESLint and Husky.
 - Setup a basic RESTful API.
 - Integrating Graphql.
 - Using TypeORM and PostgreSQL.
+- Integrating Docker.
 
 ## Prepare
 
 - [Node](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/en/)
 - [Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
-- [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## License
 
