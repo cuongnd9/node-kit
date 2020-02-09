@@ -7,7 +7,6 @@
 
 - Using TypeScript
 - Setup Babel, ESLint, Prettier, Ava and Husky.
-- Having Basic authentication and authorization.
 - Setup a basic RESTful API.
 - Integrating Graphql.
 - Using TypeORM and PostgreSQL.
