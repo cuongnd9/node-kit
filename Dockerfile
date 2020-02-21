@@ -1,13 +1,13 @@
-FROM node:10-alpine
+FROM node:12-alpine
 
 COPY . .
 
 RUN yarn install
 
-EXPOSE 9000
-
 ENV NODE_ENV=production
 
 RUN yarn build
+
+EXPOSE 9000
 
 CMD ["yarn", "start"]
