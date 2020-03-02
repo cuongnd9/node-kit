@@ -1,4 +1,5 @@
 node_modules/
+images/
 .git/
 
 .dockerignore
@@ -8,8 +9,8 @@ Dockerfile
 .env
 .env.example
 .eslintrc
+.eslintignore
 .editorconfig
-.prettierrc
 
 LICENSE.md
 README.md
