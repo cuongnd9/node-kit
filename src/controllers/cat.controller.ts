@@ -1,15 +1,15 @@
 import { Request } from 'express';
-import service from '../services/cat.service';
+import { BaseController } from '../components';
+import Service from '../services/cat.service';
 
-function create(req: Request) {
-  return service.createCat(req.body);
+class CatController extends BaseController {
+  create(req: Request) {
+    return Service.createCat(req.body);
+  }
+  
+  list(req: Request) {
+    return Service.getCatList(req.query);
+  }
 }
 
-function list(req: Request) {
-  return service.getCatList(req.query);
-}
-
-export default {
-  create,
-  list
-};
+export default CatController;

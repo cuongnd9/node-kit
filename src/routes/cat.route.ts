@@ -1,10 +1,11 @@
 import express from 'express';
 import { celebrate, Joi } from 'celebrate';
-import { checkRole, withController } from '../components';
+import { checkRole } from '../components';
 import { roles } from '../components/constants';
-import controller from '../controllers/cat.controller';
+import Controller from '../controllers/cat.controller';
 
 const router = express.Router();
+const controller = new Controller();
 
 router.get(
   '/',
@@ -19,12 +20,12 @@ router.get(
         .min(0),
     },
   }),
-  withController(controller.list),
+  controller.action('list'),
 );
 
 router.post(
   '/',
-  // checkRole(roles.admin, roles.manager, roles.staff),
+  checkRole(roles.admin, roles.manager, roles.staff),
   celebrate({
     body: {
       name: Joi.string(),
@@ -32,7 +33,7 @@ router.post(
       image: Joi.string(),
     },
   }),
-  withController(controller.create),
+  controller.action('create'),
 );
 
 export default router;
