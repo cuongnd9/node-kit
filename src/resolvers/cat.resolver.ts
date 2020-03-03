@@ -1,16 +1,16 @@
 import { IResolvers } from 'graphql-tools';
-import service from '../services/cat.service';
+import Service from '../services/cat.service';
 
 const resolver: IResolvers = {
   Query: {
     async cats(_, args) {
-      const list = await service.getCatList(args);
+      const list = await Service.getCatList(args);
       return list;
     }
   },
   Mutation: {
     async createCat(_, args) {
-      const newCat = await service.createCat(args);
+      const newCat = await Service.createCat(args);
       return newCat;
     }
   }
