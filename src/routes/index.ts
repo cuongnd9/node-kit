@@ -2,9 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import logger from 'morgan';
-import Boom from '@hapi/boom';
 import { errors } from 'celebrate';
 import { handleError } from '../components';
+import { NotFound } from '../components/errors';
 import catRoute from './cat.route';
 
 const router = express.Router();
@@ -21,7 +21,7 @@ router.use(logger('dev'));
 router.use('/cat', catRoute);
 // 404 not found.
 router.use((req, res, next) => {
-  next(Boom.notFound('API not found'));
+  next(new NotFound('API not found'));
 });
 
 // Celebrate validation errors.

@@ -1,6 +1,6 @@
 import { Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import Boom from '@hapi/boom';
+import { Unauthorized, Forbidden } from './errors';
 import config from './config';
 
 function checkRole(...allowed: string[]) {
@@ -9,7 +9,7 @@ function checkRole(...allowed: string[]) {
     const token =
       req.body.token || req.query.token || req.headers['access-token'];
     if (!token) {
-      throw Boom.unauthorized('No token provided');
+      throw new Unauthorized('No token provided');
     }
     const { secretKey } = config.jwt;
     try {
@@ -18,10 +18,10 @@ function checkRole(...allowed: string[]) {
         req.user = decoded;
         next();
       } else {
-        throw Boom.forbidden('Your role is not allowed');
+        throw new Forbidden('Your role is not allowed');
       }
     } catch (err) {
-      throw Boom.unauthorized('Invalid access token');
+      throw new Unauthorized('Invalid access token');
     }
   };
 }

@@ -1,8 +1,8 @@
 import { Request } from 'express';
-import { BaseController } from '../components';
+import { AppController } from '../components';
 import Service from '../services/cat.service';
 
-class CatController extends BaseController {
+class CatController extends AppController {
   create(req: Request) {
     return Service.createCat(req.body);
   }
