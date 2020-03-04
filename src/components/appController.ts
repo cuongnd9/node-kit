@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-class BaseController {
+class AppController {
     action(name: string) {
         return async (req: Request, res: Response, next: NextFunction) => {
             try {
@@ -13,4 +13,4 @@ class BaseController {
     }
 }
 
-export default BaseController;
+export default AppController;
