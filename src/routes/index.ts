@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import logger from 'morgan';
 import { errors } from 'celebrate';
-import { handleError } from '../components';
+import { handleError } from 'nsdk';
 import { NotFound } from '../components/errors';
 import catRoute from './cat.route';
 

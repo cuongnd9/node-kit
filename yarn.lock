@@ -3140,6 +3140,14 @@ npmlog@^4.0.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
+nsdk@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nsdk/-/nsdk-0.2.0.tgz#fd3cfa50602720ee670d27f0713aae6c9a049e9e"
+  integrity sha512-zCrtTWpQoDP1OGXYnjRb9y/3P39THDSIUsWSnZfhW5mfEsYYfkMiDA91T7mkpVWDMtdrylDF/LOoWke5Jhv02g==
+  dependencies:
+    axios "^0.19.2"
+    express "^4.17.1"
+
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
