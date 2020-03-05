@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import { AppController } from '../components';
+import { AppController } from 'nsdk';
 import Service from '../services/cat.service';
 
 class CatController extends AppController {
