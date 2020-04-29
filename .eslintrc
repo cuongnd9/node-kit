@@ -1,12 +1,71 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:@typescript-eslint/recommended"],
+  "plugins": ["promise"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base",
+    "plugin:promise/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "rules": {
     "@typescript-eslint/explicit-function-return-type": ["off"],
-    "@typescript-eslint/no-explicit-any": ["off"]
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "max-len": [2, { "code": 150, "tabWidth": 4, "ignoreUrls": true }],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "global-require": "off",
+    "new-cap": "off",
+    "consistent-return": "off",
+    "import/prefer-default-export": "off",
+    "react/static-property-placement": "off",
+    "semi": ["error", "always"],
+    "class-methods-use-this": "off",
+    "max-classes-per-file": "off",
+    "require-await": "error",
+    "camelcase": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "lines-between-class-members":  ["error", "always"],
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/member-delimiter-style": ["error", {
+      "multiline": {
+        "delimiter": "semi",
+        "requireLast": true
+      },
+      "singleline": {
+        "delimiter": "semi",
+        "requireLast": false
+      }
+    }],
+    "import/extensions": "off",
+    "promise/always-return": "off",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "promise/catch-or-return": "error",
+    "promise/no-native": "off",
+    "promise/no-nesting": "warn",
+    "promise/no-promise-in-callback": "warn",
+    "promise/no-callback-in-promise": "warn",
+    "promise/avoid-new": "warn",
+    "promise/no-new-statics": "error",
+    "promise/no-return-in-finally": "warn",
+    "promise/valid-params": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }

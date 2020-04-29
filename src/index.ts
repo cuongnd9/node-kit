@@ -9,10 +9,8 @@ import config from './components/config';
 dotenv.config();
 
 createConnection()
-  .then(() => {
+  .then((): void => {
     const server = http.createServer(app);
-    server.listen(config.port, () =>
-      console.log(`Server is listening on port ${config.port}`)
-    );
+    server.listen(config.port, () => console.log(`Server is listening on port ${config.port}`));
   })
   .catch((error: any) => console.log('TypeORM connection error: ', error));
