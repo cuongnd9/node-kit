@@ -10,7 +10,7 @@ class CatService {
   static getCatList({ skip = 0, take = 10 }: { skip?: number; take?: number }) {
     return CatEntity.find({
       skip,
-      take
+      take,
     });
   }
 }

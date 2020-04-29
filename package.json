@@ -13,13 +13,12 @@
     "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
     "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
     "migration:auto": "ts-node ./node_modules/typeorm/cli.js migration:create -n ",
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint --fix src/**/*.ts"
+    "lint": "eslint --ext ts src",
+    "lint:fix": "eslint --fix --ext ts src"
   },
   "lint-staged": {
     "*.ts": [
-      "npm run lint",
-      "git add"
+      "npm run lint"
     ]
   },
   "husky": {
@@ -46,7 +45,8 @@
     "pg": "^7.17.1",
     "reflect-metadata": "^0.1.13",
     "thinid": "^0.5.5",
-    "typeorm": "^0.2.22"
+    "typeorm": "^0.2.22",
+    "yarn": "^1.22.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -59,6 +59,9 @@
     "@typescript-eslint/eslint-plugin": "^2.17.0",
     "@typescript-eslint/parser": "^2.17.0",
     "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-promise": "^4.2.1",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.2",
     "nodemon": "^1.19.4",

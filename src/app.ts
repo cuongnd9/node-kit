@@ -7,7 +7,7 @@ import schema from './graphql';
 const app: Application = express();
 
 // REST API
-app.get('/', function(_, res: Response) {
+app.get('/', (_, res: Response) => {
   res.send('Xin chào 👋🇻🇳');
 });
 app.use('/api', apiRoute);

@@ -6,7 +6,7 @@ class CatController extends AppController {
   create(req: Request) {
     return Service.createCat(req.body);
   }
-  
+
   list(req: Request) {
     return Service.getCatList(req.query);
   }
