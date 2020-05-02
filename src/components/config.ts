@@ -1,5 +1,5 @@
 const config = {
-  port: process.env.PORT || 8989,
+  port: process.env.PORT || 9000,
   jwt: {
     secretKey: process.env.JWT_SECRET_KEY || 'nodekit',
     algorithm: process.env.JWT_ALGORITHM || 'HS256',
