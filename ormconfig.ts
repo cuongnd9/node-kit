@@ -24,18 +24,27 @@ const connectionOptions = {
     process.env.NODE_ENV === 'test'
       ? process.env.TEST_DB_DATABASE
       : process.env.DB_DATABASE,
-  logging: false,
+  logging: process.env.NODE_ENV === 'development' ? true : false,
   dropSchema: process.env.NODE_ENV === 'test' ? true : false,
-  entities: [__dirname + '/src/entities/**/*.entity.ts'],
-  migrations: [__dirname + '/src/migrations/**/*.migration.ts'],
-  subscribers: [__dirname + '/src/subscribers/**/*.subscriber.ts'],
+  entities: process.env.NODE_ENV === 'development' ?
+    [__dirname + '/src/entities/**/*.entity.ts'] :
+    [__dirname + '/build/entities/**/*.entity.js'],
+  migrations: process.env.NODE_ENV === 'development' ?
+    [__dirname + '/src/migrations/**/*.migration.ts'] :
+    [__dirname + '/build/migrations/**/*.migration.js'],
+  subscribers: process.env.NODE_ENV === 'development' ?
+    [__dirname + '/src/subscribers/**/*.subscriber.ts'] :
+    [__dirname + '/build/subscribers/**/*.subscriber.js'],
   cli: {
     entitiesDir: __dirname + '/src/entities',
     migrationsDir: __dirname + '/src/migrations',
     subscribersDir: __dirname + '/src/subscribers'
   },
-  ssl: true,
-  migrationsRun: process.env.NODE_ENV === 'development' ? false : true
+  ssl: {
+    rejectUnauthorized: false,
+  },
+  migrationsRun: true,
+  // synchronize: true
 };
 
 module.exports = connectionOptions;

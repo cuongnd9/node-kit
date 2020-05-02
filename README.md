@@ -25,7 +25,11 @@
 
 - Follow `.env.example` file for creating `.env` file.
 - Install & run app: `yarn & yarn start:dev`
-- **Optional: run with Docker**: visit [node-kit-docker](https://github.com/103cuong/node-kit-docker) 
+- **Optional: run with Docker**: visit [node-kit-docker](https://github.com/103cuong/node-kit-docker)
+
+## Contributors
+
+[![](https://sourcerer.io/fame/103cuong/103cuong/node-kit/images/0)](https://sourcerer.io/fame/103cuong/103cuong/node-kit/links/0)[![](https://sourcerer.io/fame/103cuong/103cuong/node-kit/images/1)](https://sourcerer.io/fame/103cuong/103cuong/node-kit/links/1)[![](https://sourcerer.io/fame/103cuong/103cuong/node-kit/images/2)](https://sourcerer.io/fame/103cuong/103cuong/node-kit/links/2)[![](https://sourcerer.io/fame/103cuong/103cuong/node-kit/images/3)](https://sourcerer.io/fame/103cuong/103cuong/node-kit/links/3)[![](https://sourcerer.io/fame/103cuong/103cuong/node-kit/images/4)](https://sourcerer.io/fame/103cuong/103cuong/node-kit/links/4)[![](https://sourcerer.io/fame/103cuong/103cuong/node-kit/images/5)](https://sourcerer.io/fame/103cuong/103cuong/node-kit/links/5)[![](https://sourcerer.io/fame/103cuong/103cuong/node-kit/images/6)](https://sourcerer.io/fame/103cuong/103cuong/node-kit/links/6)[![](https://sourcerer.io/fame/103cuong/103cuong/node-kit/images/7)](https://sourcerer.io/fame/103cuong/103cuong/node-kit/links/7)
 
 ## License
 
