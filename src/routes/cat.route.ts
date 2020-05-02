@@ -9,7 +9,7 @@ const controller = new Controller();
 
 router.get(
   '/',
-  // checkRole(roles.admin, roles.manager, roles.staff),
+  checkRole(roles.admin, roles.manager, roles.staff),
   celebrate({
     query: {
       skip: Joi.number()
