@@ -18,8 +18,11 @@
 
 ## Usage
 
-- Follow `.env.example` file for creating `.env` file.
-- Install & run app: `yarn & yarn start:dev`
+```sh
+yarn
+
+yarn start:dev
+```
 
 ### Optional: run with 🐳 Docker
 
