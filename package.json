@@ -1,10 +1,10 @@
 {
   "name": "node-kit",
   "version": "1.0.0",
-  "description": "🐢🚀 A Node.js Kit with TypeScript, REST, GraphQL, TypeORM, PostgreSQL and awesome tools.",
+  "description": "🐢🚀 A Node.js Kit with TypeScript, REST, TypeORM, PostgreSQL and awesome tools.",
   "main": "src/index.ts",
   "repository": "git@github.com:cuongw/node-kit.git",
-  "author": "Nguyen Duy Cuong <cuongw.me@gmail.com>",
+  "author": "Nguyen Duy Cuong <103cuong@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start:dev": "NODE_ENV=development nodemon --ignore build/ --exec ts-node src/index.ts",
@@ -28,7 +28,6 @@
     }
   },
   "dependencies": {
-    "apollo-server-express": "^2.9.16",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "celebrate": "^11.0.1",
@@ -36,7 +35,6 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "giin": "^0.1.2",
-    "graphql-tools": "^4.0.6",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",

@@ -1,13 +1,12 @@
 # node-kit
 
-🐢🚀 A Node.js Kit with TypeScript, REST, GraphQL, TypeORM, PostgreSQL and awesome tools.
+🐢🚀 A Node.js Kit with TypeScript, REST, TypeORM, PostgreSQL and awesome tools.
 
 ## Features
 
 - Using TypeScript.
 - Setup Babel, ESLint and Husky.
 - Setup a basic RESTful API.
-- Integrating Graphql.
 - Using TypeORM and PostgreSQL.
 - Integrating Docker.
 
@@ -28,4 +27,4 @@
 
 ## License
 
-MIT © [cuongw](https://github.com/cuongw)
+MIT © [103cuong](https://github.com/103cuong)
