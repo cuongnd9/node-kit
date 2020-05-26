@@ -1,6 +1,6 @@
 import express from 'express';
 import { celebrate, Joi } from 'celebrate';
-import { checkRole } from '../components';
+import { checkRole } from '../components/middlewares';
 import { roles } from '../components/constants';
 import Controller from '../controllers/cat.controller';
 

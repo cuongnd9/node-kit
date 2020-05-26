@@ -12,6 +12,7 @@
 
 ## Prepare
 
+- [Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
 - [Node](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/en/)
 
@@ -19,11 +20,21 @@
 
 - Follow `.env.example` file for creating `.env` file.
 - Install & run app: `yarn & yarn start:dev`
-- **Optional: run with Docker**: visit [node-kit-docker](https://github.com/103cuong/node-kit-docker)
+
+### Optional: run with 🐳 Docker
+
+```sh
+docker network create node-kit-net
+
+docker run --name node-kit-db -it -p 5432:5432 --network=node-kit-net -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres postgres
+
+docker build . -t 103cuong/node-kit
+
+docker run --name node-kit -it -p 9000:9000 --network=node-kit-net --env-file ./.env.example 103cuong/node-kit
+```
 
 ## Relative sources
 
-- [node-kit-docker](https://github.com/103cuong/node-kit-docker) - 🐳🚀 The Docker toolkit for https://github.com/103cuong/node-kit ![GitHub stars](https://img.shields.io/github/stars/103cuong/node-kit-docker?style=social)
 
 - [node-graphql-kit](https://github.com/103cuong/node-graphql-kit) - 🧘🚀 A Node.js Kit with GraphQL, Prisma, PostgreSQL, MongoDB and awesome tools. ![GitHub stars](https://img.shields.io/github/stars/103cuong/node-graphql-kit?style=social)
 
