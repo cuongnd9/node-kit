@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import { Unauthorized, Forbidden } from './errors';
 import config from './config';
 
-function checkRole(...allowed: string[]) {
+export const checkRole = (...allowed: string[]) => {
   const isAllowed = (role: string) => allowed.indexOf(role) > -1;
   // eslint-disable-next-line complexity
   return (req: any, _: Response, next: NextFunction) => {
@@ -24,6 +24,4 @@ function checkRole(...allowed: string[]) {
       throw new Unauthorized('Invalid access token');
     }
   };
-}
-
-export default checkRole;
+};
