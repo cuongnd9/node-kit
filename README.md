@@ -33,7 +33,7 @@ docker run --name node-kit-db -it -p 5432:5432 --network=node-kit-net -e POSTGRE
 
 docker build . -t 103cuong/node-kit
 
-docker run --name node-kit -it -p 9000:9000 --network=node-kit-net --env-file ./.env.example 103cuong/node-kit
+docker run --name node-kit -it -p 9000:9000 --network=node-kit-net --env-file ./.env 103cuong/node-kit
 ```
 
 ## Relative sources
