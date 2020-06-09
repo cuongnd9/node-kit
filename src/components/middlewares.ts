@@ -15,7 +15,7 @@ export const checkRole = (...allowed: string[]) => {
     try {
       const decoded: any = jwt.verify(token, secretKey);
       if (decoded && isAllowed(decoded.role)) {
-        req.user = decoded;
+        res.locals.user = decoded;
         next();
       } else {
         throw new Forbidden('Your role is not allowed');
