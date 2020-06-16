@@ -6,7 +6,7 @@ import config from './config';
 export const checkRole = (...allowed: string[]) => {
   const isAllowed = (role: string) => allowed.indexOf(role) > -1;
   // eslint-disable-next-line complexity
-  return (req: any, _: Response, next: NextFunction) => {
+  return (req: any, res: Response, next: NextFunction) => {
     const token = req.body.token || req.query.token || req.headers['access-token'];
     if (!token) {
       throw new Unauthorized('No token provided');
