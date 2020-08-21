@@ -36,7 +36,7 @@ docker build . -t 103cuong/node-kit
 docker run --name node-kit -it -p 9000:9000 --network=node-kit-net --env-file ./.env 103cuong/node-kit
 ```
 
-## Relative sources
+## Related
 
 
 - [node-graphql-kit](https://github.com/103cuong/node-graphql-kit) - 🧘🚀 A Node.js Kit with GraphQL, Prisma, PostgreSQL, MongoDB and awesome tools. ![GitHub stars](https://img.shields.io/github/stars/103cuong/node-graphql-kit?style=social)
